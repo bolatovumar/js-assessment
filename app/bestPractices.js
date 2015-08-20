@@ -7,29 +7,34 @@ exports = (typeof window === 'undefined') ? global : window;
  */
 
 exports.bestPracticesAnswers = {
+  // avoid global variables
   globals : function() {
-    myObject = {
+    var myObject = {
       name : 'Jory'
     };
 
     return myObject;
   },
 
+  // declare functions safely
   functions : function(flag) {
+    var getValue;
     if (flag) {
-      function getValue() { return 'a'; }
+      getValue = function() { return 'a'; }
     } else {
-      function getValue() { return 'b'; }
+      getValue = function() { return 'b'; }
     }
 
     return getValue();
   },
 
+  // use parseInt correctly
   parseInt : function(num) {
-    return parseInt(num);
+    return parseInt(num, 10);
   },
 
+  // understand strict comparison
   identity : function(val1, val2) {
-
+    return val1 === val2;
   }
 };
