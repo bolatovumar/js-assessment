@@ -11,4 +11,5 @@ My answers to the questions from [test-driven JS assessment repo](https://github
 * [logicalOperators.js](app/logicalOperators.js) - all logical operator tests passing
 * [modules.js](app/modules.js) - module test passing
 * [flowControl.js](app/flowControl.js) - FizzBuzz totally passing bro
+* [recursion.js](app/recursion.js) - all recursion tests passing
 
